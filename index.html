@@ -1,19 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background-color: rgba(193, 230, 198,0.7);">
 <head>
+    <title>露娜的helloworld blog</title>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="15">
-    <!-- 这是一个注释,15秒会刷新一次 -->
+    <!--<meta http-equiv="refresh" content="300">
+     这是一个注释,300秒会刷新一次 -->
     <script>
 function displayDate(){
 	document.getElementById("demo").innerHTML=Date();
 }
-</script>
+    </script>
+    <!-- 以下js能屏蔽选中和右键 -->
+    <script language="javascript" type="text/javascript">
+  document.oncontextmenu=new Function("event.returnValue=false;");
+  document.onselectstart=new Function("event.returnValue=false;");
+    </script>
 </head>
-<body>
-<h1>我的第一个 JavaScript 程序</h1>
-<p id="demo" >这是一个段落</p>
-<p contenteditable="true">这是可修改段落</p>
-<button type="button" onclick="displayDate()">显示日期</button>
+<!-- 以下id对象能屏蔽选中、粘贴、复制、剪切、右键菜单 -->
+<body id="body" onselectstart="return false" onpaste="return false" oncopy="return false;" oncut="return false;" oncontextmenu="return false;">
+<!-- 以下id对象能决定颜色
+<body style="background-color: rgb(193, 230, 198); transition: background-color 0.3s ease 0s;">
+</body> -->
+
+    <h1>我的第一个 JavaScript 程序</h1>
+    <p id="demo" >这是一个段落</p>
+    <p contenteditable="true">这是可修改段落</p>
+    <button type="button" onclick="displayDate()">显示日期</button>
+
 </body>
 </html>
+
