@@ -15,7 +15,6 @@ function displayDate(){
   document.oncontextmenu=new Function("event.returnValue=false;");
   document.onselectstart=new Function("event.returnValue=false;");
     </script>
-<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 </head>
 <!-- 以下id对象能屏蔽选中、粘贴、复制、剪切、右键菜单 -->
 <body id="body" onselectstart="return false" onpaste="return false" oncopy="return false;" oncut="return false;" oncontextmenu="return false;">
@@ -29,7 +28,7 @@ function displayDate(){
     <button type="button" onclick="displayDate()">显示日期</button>
 	
 
-
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
     <div id="vcomments"></div>
     <script>
         new Valine({
