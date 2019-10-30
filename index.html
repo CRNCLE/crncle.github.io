@@ -65,7 +65,7 @@ img{opacity:0.4;}  img:hover{opacity:1.0;}
     <button type="button" onclick="displayDate()">显示日期</button>
 
 <a href="https://crncle.github.io/minor/index">
-<img border="0" src="3b8fbe702c6252298592aa47a2729e52.jpg" alt="Pulpit rock" width="100%" height="228" id="rcorners2"></a>
+<img border="0" src="3b8fbe702c6252298592aa47a2729e52.jpg" alt="Pulpit rock" width="350" height="228" id="rcorners2"></a>
 <p>图片是个链接 picture is link</p>
 
 <video id='video1' width="350" height="200" controls  id="rcorners1" loop autoplay>
@@ -83,28 +83,31 @@ img{opacity:0.4;}  img:hover{opacity:1.0;}
 audio 元素
 </audio>
 
+</audio>
+<button onclick="getVolume2()" type="button">音量是多少？</button>
+<button onclick="setHalfVolume2()" type="button">把音量设置为 0.3</button>
+<button onclick="setFullVolume2()" type="button">把音量设置为 1.0</button>
+<button onclick="getPlaySpeed2()" type="button">播放速度是多少？</button>
+<button onclick="setPlaySpeed2()" type="button">将视频设置为以快速播放</button>
+
+<script>
+myVid2=document.getElementById("video2");
+function getVolume2()     { alert(myVid2.volume);} 
+function setHalfVolume2() { myVid2.volume=0.3;} 
+function setFullVolume2()  { myVid2.volume=1.0;} 
+function getPlaySpeed2()  { alert(myVid2.playbackRate);} 
+function setPlaySpeed2()  { myVid2.playbackRate=1.5;} 
+setHalfVolume2()
+</script> 
+
 <script>
 myVid=document.getElementById("video1");
-function getVolume()
-  { 
-  alert(myVid.volume);
-  } 
-function setHalfVolume()
-  { 
-  myVid.volume=0.2;
-  } 
-function setFullVolume()
-  { 
-  myVid.volume=1.0;
-  } 
-function getPlaySpeed()
-  { 
-  alert(myVid.playbackRate);
-  } 
-function setPlaySpeed()
-  { 
-  myVid.playbackRate=1.5;
-  } 
+function getVolume()     { alert(myVid.volume);} 
+function setHalfVolume() { myVid.volume=0.3;} 
+function setFullVolume()  { myVid.volume=1.0;} 
+function getPlaySpeed()  { alert(myVid.playbackRate);} 
+function setPlaySpeed()  { myVid.playbackRate=1.5;} 
+  
 setHalfVolume()
 </script> 
 	
