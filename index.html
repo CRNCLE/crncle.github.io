@@ -29,7 +29,11 @@ function displayDate(){
     background: #8AC007;
     padding: 0px; 
 }
-
+#rcorners3 {
+    border-radius: 15px 15px 5px 5px;
+    background: #8AC007;
+    padding: 0px; 
+}
 #example1 {
     background-image: url(pic1.jpg),url(pic2.jpg);
     background-size:100%;
@@ -65,7 +69,7 @@ img{opacity:0.4;}  img:hover{opacity:1.0;}
 <p>图片是个链接 picture is link</p>
 </div>
 
-<video id='video1' width="350" height="200" controls  id="rcorners1" loop preload="none">
+<video width="350" height="200" controls  id="rcorners3" loop preload="none">
   <source src="sample.mp4" type="video/mp4">
 </video>
 <div>
@@ -102,7 +106,7 @@ setHalfVolume2()
 </script> 
 
 <script>
-myVid=document.getElementById("video1");
+myVid=document.getElementById("rcorners3");
 function getVolume()     { alert(myVid.volume);} 
 function setHalfVolume() { myVid.volume=0.3;} 
 function setFullVolume()  { myVid.volume=1.0;} 
