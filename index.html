@@ -58,27 +58,88 @@ function displayDate(){
 
     <h1>我的第一个 JavaScript 程序</h1>
 	<a href="https://crncle.github.io/minor/index">访问子页面</a>
-    <p id="demo" >这是一个段落</p>
+    <p id="demo" >CRNCLE的sample</p>
     <p contenteditable="true">这是可修改段落</p>
     <button type="button" onclick="displayDate()">显示日期</button>
 
 <a href="https://crncle.github.io/minor/index">
-<img border="0" src="3b8fbe702c6252298592aa47a2729e52.jpg" alt="Pulpit rock" width="304" height="228"></a>
+<img border="0" src="3b8fbe702c6252298592aa47a2729e52.jpg" alt="Pulpit rock" width="304" height="228" id="rcorners2"></a>
 <p>图片是个链接 picture is link</p>
 
-<video width="350" height="200" controls  id="rcorners1" loop autoplay volume=0.2>
+<video id='video1' width="350" height="200" controls  id="rcorners1" loop autoplay>
   <source src="sample.mp4" type="video/mp4">
 </video>
+<button onclick="getVolume()" type="button">音量是多少？</button>
+<button onclick="setHalfVolume()" type="button">把音量设置为 0.2</button>
+<button onclick="setFullVolume()" type="button">把音量设置为 1.0</button>
+<button onclick="getPlaySpeed()" type="button">播放速度是多少？</button>
+<button onclick="setPlaySpeed()" type="button">将视频设置为以快速播放</button>
 
 <p>audio name:Emotional Union - 迫られる決断.mp3</p>
-<audio controls loop="loop" volume=0.2 autoplay>
+<audio id='video1' controls loop="loop">
   <source src="Emotional Union - 迫られる決断.mp3" type="audio/mpeg">
 audio 元素
 </audio>
 
+<script>
+myVid=document.getElementById("video1");
+function getVolume()
+  { 
+  alert(myVid.volume);
+  } 
+function setHalfVolume()
+  { 
+  myVid.volume=0.2;
+  } 
+function setFullVolume()
+  { 
+  myVid.volume=1.0;
+  } 
+function getPlaySpeed()
+  { 
+  alert(myVid.playbackRate);
+  } 
+function setPlaySpeed()
+  { 
+  myVid.playbackRate=1.5;
+  } 
+setHalfVolume()
+</script> 
+	
+	
+	
+	
+	
+<style>
+    .page{
+        width:100px;
+        height:100px;
+        position:relative;}
+    .textbg{
+        position:absolute;
+        left:0px;
+        top:0px;
+        width:200px;
+        height:200px;
+        z-index:-1;
+        //color:#999999;
+    }
+    body{
+      padding: 50px;
+      background: url(img/bg.png) 0 0 repeat;
+    }
+
+</style>
+<body>
+    <div class="page">
+    <div class="textbg">文字图片无法被选择或者选中..文字图片无法被选择或者选中..文字图片无法被选择或者选中</div>
+    <span>aab</span>
+    </div>
+</body>
+
 
 	
-
+	
 
 <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
     <div id="vcomments"></div>
