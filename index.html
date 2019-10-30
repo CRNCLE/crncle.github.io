@@ -28,11 +28,12 @@ function displayDate(){
     background: #8AC007;
     padding: 0px; 
 }
-#rcorners3 {
-    border-radius: 15px 15px 5px 5px;
-    background: #8AC007;
-    padding: 0px; 
+#rcorners3 {border-radius: 15px 15px 5px 5px;}
+#st4 {border-radius: 15px 15px 15px 15px;
+                    box-shadow: 3px 3px 2px 0 rgba(0,0,0,0.2)
+
 }
+
 #example1 {
     background-image: url(pic1.jpg),url(pic2.jpg);
     background-size:100%;
@@ -56,10 +57,10 @@ img{opacity:0.4;}  img:hover{opacity:1.0;}
 </div>
 
     <h1>我的第一个 JavaScript 程序</h1>
-	<button href="https://crncle.github.io/minor/index">访问子页面</button>
-	<button href="/minor/index">访问子页面_短链接</button>
-	<button href="minor/index">访问子页面_短链接</button>
-	<button href="https://crncle.github.io/minor">访问子页面</button>
+	<button href="https://crncle.github.io/minor/index" id='st4'>访问子页面</button>
+	<button href="/minor/index" id='st4'>访问子页面_短链接</button>
+	<button href="minor/index" id='st4'>访问子页面_短链接</button>
+	<button href="https://crncle.github.io/minor" id='st4'>访问子页面</button>
     <p id="demo" >CRNCLE的sample</p>
     <p contenteditable="true">这是可修改段落</p>
     <button type="button" onclick="displayDate()">显示日期</button>
