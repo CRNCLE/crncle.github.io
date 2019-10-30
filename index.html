@@ -16,6 +16,36 @@ function displayDate(){
   document.onselectstart=new Function("event.returnValue=false;");
     </script>
 </head>
+	
+<style> 
+#rcorners1 {
+    border-radius: 15px 15px 5px 5px;
+    background: #8AC007;
+    padding: 5px; 
+}
+
+#rcorners2 {
+    border-radius: 10px;
+    background: #8AC007;
+    padding: 10px; 
+}
+
+#rcorners2 {
+    border-radius: 10px;
+    background: #8AC007;
+    padding: 10px; 
+}
+
+#example1 {
+    background-image: url(pic1.jpg),url(pic2.jpg);
+    background-size:100%;
+    background-position: right button, left top;
+    background-repeat: no-repeat, repeat;
+    background-opacity:50% ;
+}
+
+</style>
+
 <!-- 以下id对象能屏蔽选中、粘贴、复制、剪切、右键菜单 -->
 <body id="body" onselectstart="return false" onpaste="return false" oncopy="return false;" oncut="return false;" oncontextmenu="return false;">
 <!-- 以下id对象能决定颜色
@@ -36,15 +66,18 @@ function displayDate(){
 <img border="0" src="3b8fbe702c6252298592aa47a2729e52.jpg" alt="Pulpit rock" width="304" height="228"></a>
 <p>图片是个链接 picture is link</p>
 
-<video width="320" height="240" controls>
+<video width="100%" height="100%" controls  id="rcorners1" loop autoplay volume=0.2>
   <source src="sample.mp4" type="video/mp4">
 </video>
 
 <p>audio name:Emotional Union - 迫られる決断.mp3</p>
-<audio controls>
+<audio controls loop="loop" volume=0.2 autoplay>
   <source src="Emotional Union - 迫られる決断.mp3" type="audio/mpeg">
 audio 元素
 </audio>
+
+
+	
 
 
 <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
