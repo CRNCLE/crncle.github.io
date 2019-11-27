@@ -1,0 +1,15 @@
+webdriver = window.navigator.webdriver;
+if(webdriver){
+    console.log('check')
+} else {
+    console.log('正常浏览器')
+}
+
+
+<iframe src="https://crncle.github.io/" width="400" height="300" frameborder="0">
+<p>Your browser does not support iframes.</p>
+</iframe>
+
+<iframe srcdoc="<p>Hello world!</p>" src="https://crncle.github.io/"  scrolling="auto">
+<p>Your browser does not support iframes.</p>
+</iframe>
